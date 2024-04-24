@@ -33,13 +33,18 @@ class Player(_name: String, _health: Int, _isBlessed: Boolean) {
 }
 */
 fun capitalize(str: String): String {
-    // "str" =>  ["s", "t", "r"]
     val alphabet: String = "abcdefghijklmnopqrstuvwxyz"
     val upperAlphabet: String = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
     val new_string = mutableListOf<Char>()
-    for (element in str.toCharArray()) {
-        new_string.add(upperAlphabet[alphabet.indexOf(element)])
+    for (letter in str) {
+    	if (letter in alphabet){
+        	new_string.add(upperAlphabet[alphabet.indexOf(letter)])
+    	}
+        else {
+        	new_string.add(letter)
+        }
     }
     return new_string.joinToString("")
+}
 
 }
