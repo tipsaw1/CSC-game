@@ -46,5 +46,3 @@ fun capitalize(str: String): String {
     }
     return new_string.joinToString("")
 }
-
-}
